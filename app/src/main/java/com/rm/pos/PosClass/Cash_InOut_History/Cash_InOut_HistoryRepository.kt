@@ -8,15 +8,15 @@ class Cash_InOut_HistoryRepository (private val cashInoutHistoryDAO: Cash_InOut_
     val readAllData: LiveData<List<Cash_InOut_History>> = cashInoutHistoryDAO.readAllData()
 
     suspend fun addCIOHistory(cashInoutHistory: Cash_InOut_History){
-        cashInoutHistoryDAO.insert_CashInOutHistory(cashInoutHistory)
+        cashInoutHistoryDAO.insert(cashInoutHistory)
     }
 
     suspend fun updateCIOHistory(cashInoutHistory: Cash_InOut_History){
-        cashInoutHistoryDAO.update_CashInOutHistory(cashInoutHistory)
+        cashInoutHistoryDAO.update(cashInoutHistory)
     }
 
     suspend fun deleteCIOHistory(cashInoutHistory: Cash_InOut_History){
-        cashInoutHistoryDAO.delete_CashInOutHistory(cashInoutHistory)
+        cashInoutHistoryDAO.delete(cashInoutHistory)
     }
 
 

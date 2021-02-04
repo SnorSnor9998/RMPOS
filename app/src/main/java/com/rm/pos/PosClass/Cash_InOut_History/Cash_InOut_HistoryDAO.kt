@@ -8,13 +8,13 @@ import androidx.room.*
 interface Cash_InOut_HistoryDAO {
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    suspend fun insert_CashInOutHistory(cashInoutHistory: Cash_InOut_History)
+    suspend fun insert(cashInoutHistory: Cash_InOut_History)
 
     @Update
-    suspend fun update_CashInOutHistory(cashInoutHistory: Cash_InOut_History)
+    suspend fun update(cashInoutHistory: Cash_InOut_History)
 
     @Delete
-    suspend fun delete_CashInOutHistory(cashInoutHistory: Cash_InOut_History)
+    suspend fun delete(cashInoutHistory: Cash_InOut_History)
 
     @Query("DELETE FROM Cash_InOut_History")
     suspend fun deleteAll_CashInOutHistory()

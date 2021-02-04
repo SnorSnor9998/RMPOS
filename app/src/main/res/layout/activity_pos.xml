@@ -1,9 +1,237 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".PosActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/aty_pos_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/aty_pos_container_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.93"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/aty_pos_container_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.07"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aty_pos_container">
+
+        <LinearLayout
+            android:id="@+id/aty_pos_nav_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <RelativeLayout
+                android:id="@+id/aty_pos_nav_pos"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/darker_gray"
+                android:onClick="nav_click"
+                android:padding="@dimen/nav_padding">
+
+                <ImageView
+                    android:id="@+id/aty_pos_nav_pos_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/nav_icon_height"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/nav_marginTop"
+                    android:focusable="false"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_pos"
+                    android:contentDescription="@string/nav_pos"/>
+
+                <TextView
+                    android:id="@+id/aty_pos_nav_pos_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/aty_pos_nav_pos_icon"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/nav_pos"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/nav_text_size" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/aty_pos_nav_orderhistory"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="nav_click"
+                android:padding="@dimen/nav_padding">
+
+                <ImageView
+                    android:id="@+id/aty_pos_nav_orderhistory_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/nav_icon_height"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/nav_marginTop"
+                    android:focusable="false"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_file"
+                    android:contentDescription="@string/nav_order_history"/>
+
+                <TextView
+                    android:id="@+id/aty_pos_nav_orderhistory_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/aty_pos_nav_orderhistory_icon"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/nav_order_history"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/nav_text_size" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/aty_pos_nav_cashinout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="nav_click"
+                android:padding="@dimen/nav_padding">
+
+                <ImageView
+                    android:id="@+id/aty_pos_nav_cashinout_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/nav_icon_height"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/nav_marginTop"
+                    android:focusable="false"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_cashinout"
+                    android:contentDescription="@string/nav_cash_in_amp_out"/>
+
+                <TextView
+                    android:id="@+id/aty_pos_nav_cashinout_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/aty_pos_nav_cashinout_icon"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/nav_cash_in_amp_out"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/nav_text_size" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/aty_pos_nav_endofday"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="nav_click"
+                android:padding="@dimen/nav_padding">
+
+                <ImageView
+                    android:id="@+id/aty_pos_nav_endofday_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/nav_icon_height"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/nav_marginTop"
+                    android:focusable="false"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_endofday"
+                    android:contentDescription="@string/nav_end_of_day"/>
+
+                <TextView
+                    android:id="@+id/aty_pos_nav_endofday_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/aty_pos_nav_endofday_icon"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/nav_end_of_day"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/nav_text_size" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/aty_pos_nav_management"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="nav_click"
+                android:padding="@dimen/nav_padding">
+
+                <ImageView
+                    android:id="@+id/aty_pos_nav_management_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/nav_icon_height"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/nav_marginTop"
+                    android:focusable="false"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_management"
+                    android:contentDescription="@string/nav_management"/>
+
+                <TextView
+                    android:id="@+id/aty_pos_nav_management_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/aty_pos_nav_management_icon"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/nav_management"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/nav_text_size" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/aty_pos_nav_setting"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="nav_click"
+                android:padding="@dimen/nav_padding">
+
+                <ImageView
+                    android:id="@+id/aty_pos_nav_setting_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/nav_icon_height"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/nav_marginTop"
+                    android:focusable="false"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_settings"
+                    android:contentDescription="@string/nav_setting"/>
+
+                <TextView
+                    android:id="@+id/aty_pos_nav_setting_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/aty_pos_nav_setting_icon"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/nav_setting"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/nav_text_size" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,7 +8,6 @@ import androidx.room.*
 
 
 @Database(entities = [Cash_InOut_History::class],version = 1, exportSchema = false)
-@TypeConverters(Converters::class)
 abstract class Cash_InOut_HistoryDB : RoomDatabase() {
 
     abstract fun historyDao() : Cash_InOut_HistoryDAO

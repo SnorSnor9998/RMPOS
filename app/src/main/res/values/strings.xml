@@ -1,3 +1,30 @@
 <resources>
     <string name="app_name">RM POS</string>
+
+    <string-array name="product_searchby_array">
+        <item>Code</item>
+        <item>Barcode</item>
+        <item>Name</item>
+    </string-array>
+
+    <!--    navigation text-->
+    <string name="nav_pos">POS</string>
+    <string name="nav_order_history">Order History</string>
+    <string name="nav_cash_in_amp_out"><![CDATA[Cash In & Out]]></string>
+    <string name="nav_end_of_day">End Of Day</string>
+    <string name="nav_management">Management</string>
+    <string name="nav_setting">Setting</string>
+
+
+    <string name="store">Store</string>
+    <string name="tax">Tax</string>
+    <string name="payment_type">Payment Type</string>
+    <string name="user">User</string>
+    <string name="membership">Membership</string>
+    <string name="inventory">Inventory</string>
+    <string name="product">Product</string>
+    <string name="report">Report</string>
+    <string name="dashboard">Dashboard</string>
+
+
 </resources>

@@ -1,6 +1,6 @@
-import androidx.room.Embedded
+package com.rm.pos.PosClass.Cash_Inout_History
+
 import androidx.room.Entity
-import androidx.room.Fts4
 import androidx.room.PrimaryKey
 import java.util.*
 
@@ -9,10 +9,9 @@ data class Cash_InOut_History(
 
     @PrimaryKey(autoGenerate = true)
     val id: Int,
-    val posid: String,
+    val posid: Int,
     var amount: Int,
     var remark: String,
     val createdAt: Date,
-    val userid: String,
-
-    )
+    val userid: String
+)

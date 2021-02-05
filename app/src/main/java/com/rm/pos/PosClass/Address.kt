@@ -1,11 +1,10 @@
+package com.rm.pos.PosClass
 
-class Address {
-
-    var addressLine1 : String = ""
-    var addressLine2 : String = ""
-    var postcode : String = ""
-    var city : String = ""
-    var state : String = ""
-    var country : String = ""
-
-}
+class Address (
+    var addressLine1 : String,
+    var addressLine2 : String,
+    var postcode : String,
+    var city : String,
+    var state : String,
+    var country : String
+    )

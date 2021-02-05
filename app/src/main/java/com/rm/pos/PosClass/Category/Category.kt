@@ -1,12 +1,4 @@
-import androidx.room.Entity
-import androidx.room.PrimaryKey
-import java.util.*
+package com.rm.pos.PosClass.Category
 
-@Entity(tableName = "Category")
-data class Category(
-
-    @PrimaryKey(autoGenerate = true)
-    var categoryId: Int,
-    var categoryName: String
-
-)
+class Category {
+}

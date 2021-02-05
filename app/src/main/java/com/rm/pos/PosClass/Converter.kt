@@ -1,10 +1,13 @@
+package com.rm.pos.PosClass
+
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import androidx.room.TypeConverter
 import java.io.ByteArrayOutputStream
 import java.util.*
 
-class Converters {
+class Converter {
+
     @TypeConverter
     fun fromTimestamp(value: Long?): Date? {
         return value?.let { Date(it) }
@@ -23,8 +26,18 @@ class Converters {
     }
 
     @TypeConverter
-    fun toBitmap(byteArray: ByteArray): Bitmap{
+    fun toBitmap(byteArray: ByteArray): Bitmap {
         return  BitmapFactory.decodeByteArray(byteArray,0,byteArray.size)
+    }
+
+    @TypeConverter
+    fun fromUUID(uuid : UUID) : String{
+        return uuid.toString()
+    }
+
+    @TypeConverter
+    fun toUUID(uuid : String) : UUID{
+        return UUID.fromString(uuid)
     }
 
 

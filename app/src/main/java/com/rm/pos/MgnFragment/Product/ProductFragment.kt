@@ -21,13 +21,13 @@ class ProductFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_product, container, false)
 
         view.mgn_product_btn_newproduct.setOnClickListener {
-            val action = ProductFragmentDirections.actionProductFragmentToAddUpdateProductFragment(false) //editor mode false, layout will set to add product
-            findNavController().navigate(action)
+            findNavController().navigate(R.id.action_productFragment_to_addProductFragment)
         }
 
         view.mgn_product_btn_editproduct.setOnClickListener {
-            val action = ProductFragmentDirections.actionProductFragmentToAddUpdateProductFragment(true)
-            findNavController().navigate(action)
+//            val action = ProductFragmentDirections.actionProductFragmentToAddUpdateProductFragment(true)
+//            findNavController().navigate(action)
+            findNavController().navigate(R.id.action_productFragment_to_editProductFragment)
         }
 
 

@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MgnFragment.Product.AddUpdateProductFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/product_container_top"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/product_btn_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/ic_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/product_lbl_oprationTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="New Product"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/product_btn_back"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/product_container_center"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/product_container_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.85"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/product_container_top">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <!--            productname-->
+                <TextView
+                    android:id="@+id/product_lbl_productname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="48dp"
+                    android:layout_marginTop="32dp"
+                    android:gravity="center"
+                    android:text="Product Name"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/product_txt_productname"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="32dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/product_lbl_productname"
+                    app:layout_constraintStart_toEndOf="@+id/product_lbl_productname"
+                    app:layout_constraintTop_toTopOf="@+id/product_lbl_productname"
+                    app:layout_constraintWidth_percent="0.6" />
+
+                <!--            productcode-->
+                <TextView
+                    android:id="@+id/product_lbl_productcode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:text="Product Code"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="@+id/product_lbl_productname"
+                    app:layout_constraintTop_toBottomOf="@+id/product_txt_productname" />
+
+                <EditText
+                    android:id="@+id/product_txt_productcode"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="32dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/product_lbl_productcode"
+                    app:layout_constraintStart_toEndOf="@+id/product_lbl_productcode"
+                    app:layout_constraintTop_toTopOf="@+id/product_lbl_productcode"
+                    app:layout_constraintWidth_percent="0.6" />
+
+                <!--            productbarcode-->
+                <TextView
+                    android:id="@+id/product_lbl_productbarcode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:text="Product Barcode"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="@+id/product_lbl_productcode"
+                    app:layout_constraintTop_toBottomOf="@+id/product_txt_productcode" />
+
+                <EditText
+                    android:id="@+id/product_txt_productbarcode"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="32dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/product_lbl_productbarcode"
+                    app:layout_constraintStart_toEndOf="@+id/product_lbl_productbarcode"
+                    app:layout_constraintTop_toTopOf="@+id/product_lbl_productbarcode"
+                    app:layout_constraintWidth_percent="0.6" />
+
+
+                <!--            productunitmeasure-->
+                <TextView
+                    android:id="@+id/product_lbl_unitmeasure"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:text="Unit Measurement"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="@+id/product_lbl_productbarcode"
+                    app:layout_constraintTop_toBottomOf="@+id/product_txt_productbarcode" />
+
+                <EditText
+                    android:id="@+id/product_txt_unitmeasure"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="32dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/product_lbl_unitmeasure"
+                    app:layout_constraintStart_toEndOf="@+id/product_lbl_unitmeasure"
+                    app:layout_constraintTop_toTopOf="@+id/product_lbl_unitmeasure"
+                    app:layout_constraintWidth_percent="0.6" />
+
+
+                <!--            productcost-->
+                <TextView
+                    android:id="@+id/product_lbl_productcost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:text="Cost"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="@+id/product_lbl_unitmeasure"
+                    app:layout_constraintTop_toBottomOf="@+id/product_txt_unitmeasure" />
+
+                <EditText
+                    android:id="@+id/product_txt_productcost"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="32dp"
+                    android:inputType="numberDecimal"
+                    app:layout_constraintBottom_toBottomOf="@+id/product_lbl_productcost"
+                    app:layout_constraintStart_toEndOf="@+id/product_lbl_productcost"
+                    app:layout_constraintTop_toTopOf="@+id/product_lbl_productcost"
+                    app:layout_constraintWidth_percent="0.3" />
+
+
+                <!--            productprice-->
+                <TextView
+                    android:id="@+id/product_lbl_productprice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:text="Price"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="@+id/product_lbl_productcost"
+                    app:layout_constraintTop_toBottomOf="@+id/product_txt_productcost" />
+
+                <EditText
+                    android:id="@+id/product_txt_productprice"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="32dp"
+                    android:inputType="numberDecimal"
+                    app:layout_constraintBottom_toBottomOf="@+id/product_lbl_productprice"
+                    app:layout_constraintStart_toEndOf="@+id/product_lbl_productprice"
+                    app:layout_constraintTop_toTopOf="@+id/product_lbl_productprice"
+                    app:layout_constraintWidth_percent="0.3" />
+
+                <!--            available-->
+                <TextView
+                    android:id="@+id/product_lbl_available"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:text="Available"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="@+id/product_lbl_productprice"
+                    app:layout_constraintTop_toBottomOf="@+id/product_txt_productprice" />
+
+                <com.bitvale.switcher.SwitcherX
+                    android:id="@+id/product_is_available"
+                    android:layout_width="65dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="32dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/product_lbl_available"
+                    app:layout_constraintStart_toEndOf="@+id/product_lbl_available"
+                    app:layout_constraintTop_toTopOf="@+id/product_lbl_available" />
+
+                <!--            service-->
+                <TextView
+                    android:id="@+id/product_lbl_service"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:text="Service"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="@+id/product_lbl_available"
+                    app:layout_constraintTop_toBottomOf="@+id/product_is_available" />
+
+                <com.bitvale.switcher.SwitcherX
+                    android:id="@+id/product_is_service"
+                    android:layout_width="65dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="32dp"
+                    android:checked="false"
+                    app:layout_constraintBottom_toBottomOf="@+id/product_lbl_service"
+                    app:layout_constraintStart_toEndOf="@+id/product_lbl_service"
+                    app:layout_constraintTop_toTopOf="@+id/product_lbl_service" />
+
+                <!--            category-->
+                <TextView
+                    android:id="@+id/product_lbl_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:text="Category"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="@+id/product_lbl_service"
+                    app:layout_constraintTop_toBottomOf="@+id/product_lbl_service" />
+
+                <Spinner
+                    android:id="@+id/product_category_picker"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="32dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/product_lbl_category"
+                    app:layout_constraintStart_toEndOf="@+id/product_lbl_category"
+                    app:layout_constraintTop_toTopOf="@+id/product_lbl_category"
+                    app:layout_constraintWidth_percent="0.2" />
+
+                <!--            productdescription-->
+                <TextView
+                    android:id="@+id/product_lbl_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:text="Description"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="@+id/product_lbl_category"
+                    app:layout_constraintTop_toBottomOf="@+id/product_lbl_category" />
+
+                <EditText
+                    android:id="@+id/product_txt_description"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:inputType="textMultiLine"
+                    android:maxHeight="200dp"
+                    android:minHeight="50dp"
+                    android:scrollbarAlwaysDrawVerticalTrack="true"
+                    android:scrollbars="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/product_lbl_description"
+                    app:layout_constraintTop_toTopOf="@+id/product_lbl_description"
+                    app:layout_constraintWidth_percent="0.6" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </ScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/product_container_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/product_btn_clear"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="8dp"
+            android:text="Clear"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/product_btn_save_or_update"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.15" />
+
+        <Button
+            android:id="@+id/product_btn_save_or_update"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="Save"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.15" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

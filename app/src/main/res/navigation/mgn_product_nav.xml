@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/management_nav"
+    app:startDestination="@id/productFragment">
+
+    <fragment
+        android:id="@+id/productFragment"
+        android:name="com.rm.pos.MgnFragment.Product.ProductFragment"
+        android:label="fragment_product"
+        tools:layout="@layout/fragment_product" >
+        <action
+            android:id="@+id/action_productFragment_to_addUpdateProductFragment"
+            app:destination="@id/addUpdateProductFragment"
+            app:launchSingleTop="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/addUpdateProductFragment"
+        android:name="com.rm.pos.MgnFragment.Product.AddUpdateProductFragment"
+        android:label="fragment_add_update_product"
+        tools:layout="@layout/fragment_add_update_product" >
+        <action
+            android:id="@+id/action_addUpdateProductFragment_to_productFragment"
+            app:destination="@id/productFragment" />
+        <argument
+            android:name="editorMode"
+            app:argType="boolean"
+            android:defaultValue="false" />
+    </fragment>
+</navigation>

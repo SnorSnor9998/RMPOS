@@ -5,7 +5,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
-import com.rm.pos.MgnFragment.ProductFragment
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.navArgs
+import androidx.navigation.navGraphViewModels
+import com.rm.pos.MgnFragment.Product.ProductFragment
 
 class ManagementActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,17 +31,14 @@ class ManagementActivity : AppCompatActivity() {
     fun sidenav_click(view: View) {
 
         when(view.id){
-            R.id.aty_mgn_sidenav_product -> replaceFragment(ProductFragment())
+            R.id.aty_mgn_sidenav_dashboard -> findNavController(R.id.fragment).setGraph(R.navigation.mgn_dashboard_nav)
+            R.id.aty_mgn_sidenav_product -> findNavController(R.id.fragment).setGraph(R.navigation.mgn_product_nav)
         }
 
     }
 
-    private fun replaceFragment(fragment: Fragment){
-        val trans = supportFragmentManager.beginTransaction()
-        trans.addToBackStack(null)
-        trans.replace(R.id.aty_mgn_fragment_container,fragment)
-        trans.addToBackStack(null)
-        trans.commit()
-    }
+
+
+
 
 }

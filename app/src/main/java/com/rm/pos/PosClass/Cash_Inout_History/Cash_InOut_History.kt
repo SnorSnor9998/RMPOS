@@ -4,6 +4,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 import java.util.*
 
+
 @Entity(tableName = "Cash_InOut_History")
 data class Cash_InOut_History(
 

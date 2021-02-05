@@ -6,7 +6,8 @@ import androidx.room.TypeConverter
 import java.io.ByteArrayOutputStream
 import java.util.*
 
-class Converter {
+class DBConverter {
+
 
     @TypeConverter
     fun fromTimestamp(value: Long?): Date? {
@@ -17,6 +18,7 @@ class Converter {
     fun dateToTimestamp(date: Date?): Long? {
         return date?.time?.toLong()
     }
+
 
     @TypeConverter
     fun fromBitmap(bitmap: Bitmap): ByteArray{
@@ -36,9 +38,11 @@ class Converter {
     }
 
     @TypeConverter
-    fun toUUID(uuid : String) : UUID{
+    fun toUUID(uuid : String) : UUID {
         return UUID.fromString(uuid)
     }
+
+
 
 
 }

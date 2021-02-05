@@ -4,11 +4,11 @@ package com.rm.rmpos.PosClass.Cash_InOut_History
 import android.content.Context
 import androidx.room.*
 import com.rm.pos.PosClass.Cash_Inout_History.Cash_InOut_History
-import com.rm.pos.PosClass.Converter
+import com.rm.pos.PosClass.DBConverter
 
 
 @Database(entities = [Cash_InOut_History::class],version = 1, exportSchema = false)
-@TypeConverters(Converter::class)
+@TypeConverters(DBConverter::class)
 abstract class Cash_InOut_HistoryDB : RoomDatabase() {
 
     abstract fun historyDao() : Cash_InOut_HistoryDAO

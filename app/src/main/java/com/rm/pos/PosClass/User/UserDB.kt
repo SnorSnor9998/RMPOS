@@ -1,24 +1,23 @@
-package com.rm.pos.PosClass.Category
+package com.rm.pos.PosClass.User
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import androidx.room.TypeConverters
-import com.rm.pos.PosClass.DBConverter
+import com.rm.rmpos.PosClass.Cash_InOut_History.Cash_InOut_HistoryDB
 
 
-@Database(entities = [Category::class],version = 1, exportSchema = false)
-@TypeConverters(DBConverter::class)
-abstract class CategoryDB:RoomDatabase() {
+@Database(entities = [User::class],version = 1,exportSchema = false)
+abstract class UserDB : RoomDatabase() {
 
-    abstract fun categoryDAO() : CategoryDAO
+    abstract fun userDAO() : UserDAO
+
 
     companion object{
         @Volatile
-        private var INSTANCE : CategoryDB? = null
+        private var INSTANCE : UserDB? = null
 
-        fun getDatabase(context: Context): CategoryDB {
+        fun getDatabase(context: Context): UserDB {
             val tempInstance = INSTANCE
             if (tempInstance != null){
                 return tempInstance
@@ -26,7 +25,7 @@ abstract class CategoryDB:RoomDatabase() {
             synchronized(this){
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
-                    CategoryDB::class.java,
+                    UserDB::class.java,
                     "RM_POS_DB" //DB name
                 ).build()
                 INSTANCE = instance
@@ -36,6 +35,5 @@ abstract class CategoryDB:RoomDatabase() {
         }
 
     }
-
 
 }

@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import androidx.lifecycle.ViewModelProvider
 import com.rm.pos.PosClass.Address
 import com.rm.pos.PosClass.Cash_Inout_History.Cash_InOut_History
@@ -33,6 +34,8 @@ class PosActivity : AppCompatActivity() {
         )
         val now = Calendar.getInstance().time
         val cio = Cash_InOut_History(0,1001,111000,"?",now,"ADMIN")
+
+
         button.setOnClickListener {
             mCash_InOut_HistoryViewModel.insert_CIOHistory(cio)
         }

@@ -1,5 +1,6 @@
 package com.rm.pos.PosClass.Cash_Inout_History
 
+import androidx.room.Embedded
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import java.util.*

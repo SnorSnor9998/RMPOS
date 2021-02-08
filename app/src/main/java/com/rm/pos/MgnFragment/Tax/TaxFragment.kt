@@ -2,10 +2,12 @@ package com.rm.pos.MgnFragment.Tax
 
 import android.app.AlertDialog
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import com.rm.pos.R
 import com.rm.pos.databinding.FragmentTaxBinding
 import kotlinx.android.synthetic.main.dialog_edit_tax.*
@@ -17,10 +19,7 @@ class TaxFragment : Fragment() {
 
     private lateinit var binding: FragmentTaxBinding
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_tax, container, false)
 
@@ -67,7 +66,7 @@ class TaxFragment : Fragment() {
             mAlertDialog.dismiss()
         }
 
-        mAlertDialog.editproduct_btn_save.setOnClickListener {
+        mAlertDialog.edittax_btn_save.setOnClickListener {
 
         }
 
@@ -75,7 +74,8 @@ class TaxFragment : Fragment() {
     }
 
     private fun deletetax(){
-
+//        Toast.makeText(this.context,"HELLO?",Toast.LENGTH_SHORT).show()
+        Log.d("HELLO?","GG IS THIS WORK?")
     }
 
 

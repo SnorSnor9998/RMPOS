@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/addtax_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/addtax_lbl_taxname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="48dp"
+            android:text="Tax Name"
+            android:textColor="@color/default_text_color"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/addtax_txt_taxname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/addtax_lbl_taxname"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/addtax_lbl_taxname"
+            app:layout_constraintTop_toTopOf="@+id/addtax_lbl_taxname"
+            app:layout_constraintWidth_percent="0.6" />
+
+
+        <TextView
+            android:id="@+id/addtax_lbl_taxrate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Tax Rate"
+            android:textColor="@color/default_text_color"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/addtax_lbl_taxname"
+            app:layout_constraintTop_toBottomOf="@+id/addtax_txt_taxname" />
+
+        <EditText
+            android:id="@+id/addtax_txt_taxrate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:inputType="number"
+            app:layout_constraintBottom_toBottomOf="@+id/addtax_lbl_taxrate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/addtax_lbl_taxrate"
+            app:layout_constraintTop_toTopOf="@+id/addtax_lbl_taxrate"
+            app:layout_constraintWidth_percent="0.6" />
+
+        <TextView
+            android:id="@+id/addtax_lbl_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Default"
+            android:textColor="@color/default_text_color"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/addtax_lbl_taxrate"
+            app:layout_constraintTop_toBottomOf="@+id/addtax_txt_taxrate" />
+
+        <com.bitvale.switcher.SwitcherX
+            android:id="@+id/addtax_switch_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/addtax_lbl_default"
+            app:layout_constraintStart_toEndOf="@+id/addtax_lbl_default"
+            app:layout_constraintTop_toTopOf="@+id/addtax_lbl_default" />
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addtax_switch_default">
+
+            <Button
+                android:id="@+id/edittax_btn_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:text="Cancel" />
+
+            <Button
+                android:id="@+id/addtax_btn_save"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:text="Save" />
+
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

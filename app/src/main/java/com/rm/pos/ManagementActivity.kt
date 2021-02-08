@@ -33,6 +33,7 @@ class ManagementActivity : AppCompatActivity() {
         when(view.id){
             R.id.aty_mgn_sidenav_dashboard -> findNavController(R.id.fragment).setGraph(R.navigation.mgn_dashboard_nav)
             R.id.aty_mgn_sidenav_product -> findNavController(R.id.fragment).setGraph(R.navigation.mgn_product_nav)
+            R.id.mgnaty_sidenav_tax -> findNavController(R.id.fragment).setGraph(R.navigation.mgn_tax_nav)
         }
 
     }

@@ -11,6 +11,8 @@ import androidx.navigation.navGraphViewModels
 import com.rm.pos.MgnFragment.Product.ProductFragment
 
 class ManagementActivity : AppCompatActivity() {
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_management)

@@ -17,14 +17,14 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:background="@android:color/darker_gray"
             android:id="@+id/aty_mgn_container_left"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:background="@android:color/darker_gray"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintWidth_percent="0.15">
+            app:layout_constraintWidth_percent="0.2">
 
             <LinearLayout
                 android:id="@+id/aty_mgn_sidenav_container"
@@ -52,13 +52,13 @@
                         android:layout_width="35dp"
                         android:layout_height="35dp"
                         android:layout_marginStart="16dp"
+                        android:contentDescription="@string/dashboard"
                         android:focusable="false"
                         android:scaleType="centerInside"
                         android:src="@drawable/ic_dashboard"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:contentDescription="@string/dashboard" />
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
                         android:id="@+id/aty_mgn_sidenav_dashboard_text"
@@ -359,7 +359,6 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-
             </LinearLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -372,7 +371,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/aty_mgn_container_left"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintWidth_percent="0.85">
+            app:layout_constraintWidth_percent="0.8">
 
 
             <fragment
@@ -381,14 +380,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:defaultNavHost="true"
-                app:navGraph="@navigation/mgn_dashboard_nav"/>
-
-
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:navGraph="@navigation/mgn_dashboard_nav" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -426,10 +425,10 @@
                     android:layout_height="@dimen/nav_icon_height"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="@dimen/nav_marginTop"
+                    android:contentDescription="@string/nav_pos"
                     android:focusable="false"
                     android:scaleType="centerInside"
-                    android:src="@drawable/ic_pos"
-                    android:contentDescription="@string/nav_pos"/>
+                    android:src="@drawable/ic_pos" />
 
                 <TextView
                     android:id="@+id/aty_mgn_nav_pos_text"
@@ -457,10 +456,10 @@
                     android:layout_height="@dimen/nav_icon_height"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="@dimen/nav_marginTop"
+                    android:contentDescription="@string/nav_order_history"
                     android:focusable="false"
                     android:scaleType="centerInside"
-                    android:src="@drawable/ic_file"
-                    android:contentDescription="@string/nav_order_history"/>
+                    android:src="@drawable/ic_file" />
 
                 <TextView
                     android:id="@+id/aty_mgn_nav_orderhistory_text"
@@ -488,10 +487,10 @@
                     android:layout_height="@dimen/nav_icon_height"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="@dimen/nav_marginTop"
+                    android:contentDescription="@string/nav_cash_in_amp_out"
                     android:focusable="false"
                     android:scaleType="centerInside"
-                    android:src="@drawable/ic_cashinout"
-                    android:contentDescription="@string/nav_cash_in_amp_out"/>
+                    android:src="@drawable/ic_cashinout" />
 
                 <TextView
                     android:id="@+id/aty_mgn_nav_cashinout_text"
@@ -519,10 +518,10 @@
                     android:layout_height="@dimen/nav_icon_height"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="@dimen/nav_marginTop"
+                    android:contentDescription="@string/nav_end_of_day"
                     android:focusable="false"
                     android:scaleType="centerInside"
-                    android:src="@drawable/ic_endofday"
-                    android:contentDescription="@string/nav_end_of_day"/>
+                    android:src="@drawable/ic_endofday" />
 
                 <TextView
                     android:id="@+id/aty_mgn_nav_endofday_text"
@@ -541,9 +540,9 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:background="@android:color/darker_gray"
                 android:onClick="nav_click"
-                android:padding="@dimen/nav_padding"
-                android:background="@android:color/darker_gray">
+                android:padding="@dimen/nav_padding">
 
                 <ImageView
                     android:id="@+id/aty_mgn_nav_management_icon"
@@ -551,10 +550,10 @@
                     android:layout_height="@dimen/nav_icon_height"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="@dimen/nav_marginTop"
+                    android:contentDescription="@string/nav_management"
                     android:focusable="false"
                     android:scaleType="centerInside"
-                    android:src="@drawable/ic_management"
-                    android:contentDescription="@string/nav_management"/>
+                    android:src="@drawable/ic_management" />
 
                 <TextView
                     android:id="@+id/aty_mgn_nav_management_text"
@@ -582,10 +581,10 @@
                     android:layout_height="@dimen/nav_icon_height"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="@dimen/nav_marginTop"
+                    android:contentDescription="@string/nav_setting"
                     android:focusable="false"
                     android:scaleType="centerInside"
-                    android:src="@drawable/ic_settings"
-                    android:contentDescription="@string/nav_setting"/>
+                    android:src="@drawable/ic_settings" />
 
                 <TextView
                     android:id="@+id/aty_mgn_nav_setting_text"
